@@ -7,12 +7,13 @@
     "clear": "rm -rf assets/css/*.map assets/css/**/*.map",
     "serve": "live-server --open=html/ --port=73 --no-css-inject",
     "sass": "node-sass --importer node_modules/node-sass-glob-importer/dist/cli.js scss/ -o assets/css/",
-    "babel": "babel es6 -d assets/js -w",
+    "babel": "babel es6 -d assets/js",
+    "babel:watch": "npm run babel -- -w",
     "dev:sass": "npm run sass -- --output-style expanded --source-map true --indent-type tab --indent-width 1",
     "dev:watch": "npm run dev:sass -- -w",
     "build:sass": "npm run sass -- --output-style compact",
-    "dev": "npm-run-all -p dev:sass dev:watch babel serve",
-    "build": "npm-run-all -p clear build:sass"
+    "dev": "npm-run-all -p dev:sass dev:watch babel:watch serve",
+    "build": "npm-run-all -p clear build:sass babel"
   },
   "keywords": [],
   "author": "",
