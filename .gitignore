@@ -1,8 +1,7 @@
 ## 제외파일 ##
 #############
 ## 파일무시
-source_dev/css/*.map
-source_dev/css/vendors/*.map
+assets/css/*.map
 
 
 ## 폴더무시
