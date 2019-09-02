@@ -1,2 +1,2 @@
-# simple-markup
-간단한 퍼블리싱 작업을 위한 세팅
+# simple-ES6Test
+ES6 test를 위한 환경 구축
