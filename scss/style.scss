@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+// autoprefixer
+// 사용법
+// 밴더프리픽스가 필요한 속성명을 vp-를 붙여서 사용
+// ex) @include vp-display(flex);
+// 컴파일된 css를 확인해 본다.
+// 밴더프리픽스가 필요없는 속성과 값을 입력하면 컴파일 화면은 출력되지 않는다.
+@import "../node_modules/sass-autoprefixer/scss/prefixes";
+
+// Mediaquery
+@import "../node_modules/breakpoint-sass/stylesheets/breakpoint";
+
+// font
+// @import "fonts/notosans"; // Noto-Sans CJK 폰트(한영일중 폰트)
+// @import "fonts/nanumgothic"; // 나눔고딕(한글 폰트)
+// @import "fonts/nanumbarungothic"; // 나눔바른고딕(한글 폰트)
+// @import "fonts/nanummyeongjo"; // 나눔명조(한글 폰트)
+// @import "fonts/interstate"; // 영문 폰트
+// @import "fonts/thebodyshop_jung"; // 한글 폰트
+
+// variable
+@import "config";
+
+// function + mixin
+@import "utils/**/*.scss";
+
+// helper class
+@import "helpers/*.scss";
+
+
+// layout
+@import "page/media_test";

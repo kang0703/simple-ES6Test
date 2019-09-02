@@ -1,0 +1,31 @@
+{
+  "name": "my_Setting",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clear": "rm -rf assets/css/*.map assets/css/**/*.map",
+    "serve": "live-server --open=html/ --port=73 --no-css-inject",
+    "sass": "node-sass --importer node_modules/node-sass-glob-importer/dist/cli.js scss/ -o assets/css/",
+    "babel": "babel es6 -d assets/js -w",
+    "dev:sass": "npm run sass -- --output-style expanded --source-map true --indent-type tab --indent-width 1",
+    "dev:watch": "npm run dev:sass -- -w",
+    "build:sass": "npm run sass -- --output-style compact",
+    "dev": "npm-run-all -p dev:sass dev:watch babel serve",
+    "build": "npm-run-all -p clear build:sass"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "breakpoint-sass": "^2.7.1",
+    "live-server": "^1.2.1",
+    "node-sass": "^4.12.0",
+    "node-sass-glob-importer": "^5.3.2",
+    "npm-run-all": "^4.1.5",
+    "sass-autoprefixer": "^1.0.1"
+  },
+  "dependencies": {}
+}

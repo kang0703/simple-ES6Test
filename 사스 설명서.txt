@@ -1,0 +1,24 @@
+### 사스 명령어 ###
+- 개발 컴파일
+sass --watch -E utf-8 --style expanded style.scss:../css/style.css
+
+- 배포 컴파일
+sass -E utf-8 --style compact --sourcemap=none style.scss:../css/style.css & del /q "../css/*.map"
+
+배포 후 .map 파일 삭제(리눅스 명령어로 사용안해도 됨)
+rm -rf ../css/*.map
+
+
+## 사스 자주쓰는 scss
+<img src="../../assets/images/main/*****.jpg" alt="">
+
+background:url($img + 'main/.png') 0 0 no-repeat;
+
+@include border-radius($border-radius : 5px);
+
+@include box-sizing;
+
+
+## node_modules 폴더 삭제
+rimraf node_modules
+

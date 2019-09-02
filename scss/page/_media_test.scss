@@ -1,0 +1,50 @@
+// breakpoint
+// $bp1: 320px;
+$bp1: 0px;
+$bp2: 680px;
+$bp3: 1080px;
+$bp4: 1384px;
+$bp1-2: $bp1 ($bp2 - 1px);
+$bp1-3: $bp1 ($bp3 - 1px);
+$bp1-4: $bp1 ($bp4 - 1px);
+$bp2-3: $bp2 ($bp3 - 1px);
+$bp2-4: $bp2 ($bp4 - 1px);
+$bp3-4: $bp3 ($bp4 - 1px);
+$mobile: $bp1-3;
+$phone: $bp1-2;
+$tablet: $bp2-3;
+$pc: $bp3;
+// $kcmtest: $bp3-4;
+
+.media-test{
+	@include cf;
+	li{
+		float:left;
+		width:33.3333%;
+		height:100px;
+		color:blue;
+		background:url($img + 'main/test-img.jpg') 0 0 no-repeat;
+		background-size:cover;
+	}
+}
+
+@include mq($mobile) {
+	.media-test{
+		@include cf;
+		li{
+			color:red;
+		}
+	}
+}
+@include mq($tablet) {
+	.media-test{
+		@include cf;
+		li{
+			color:yellow;
+		}
+	}
+}
+
+.kcm{
+	@include vp-display(flex);
+}
