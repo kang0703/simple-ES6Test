@@ -1,24 +1,93 @@
-/* Mixin printing a linear-gradient as well as a plain color fallback and the `-webkit-` prefixed declaration @access public @param {Keyword | Angle} $direction - Linear gradient direction @param {Arglist} $color-stops - List of color-stops composing the gradient @see https://www.sitepoint.com/building-linear-gradient-mixin-sass/ */
-.blind { border: 0 !important; clip: rect(0 0 0 0) !important; height: 1px !important; margin: -1px !important; overflow: hidden !important; padding: 0 !important; position: absolute !important; width: 1px !important; }
+/*
+ * Mixin printing a linear-gradient
+ * as well as a plain color fallback
+ * and the `-webkit-` prefixed declaration
+ * @access public
+ * @param {Keyword | Angle} $direction - Linear gradient direction
+ * @param {Arglist} $color-stops - List of color-stops composing the gradient
+ *
+ * @see https://www.sitepoint.com/building-linear-gradient-mixin-sass/
+ */
+.blind {
+	border: 0 !important;
+	clip: rect(0 0 0 0) !important;
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+}
 
-.blind.focusable:active, .blind.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.blind.focusable:active, .blind.focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
 
-.media-test { *zoom: 1; }
+.media-test {
+	*zoom: 1;
+}
 
-.media-test:before, .media-test:after { content: ""; display: table; }
+.media-test:before, .media-test:after {
+	content: "";
+	display: table;
+}
 
-.media-test:after { clear: both; }
+.media-test:after {
+	clear: both;
+}
 
-.media-test li { float: left; width: 33.3333%; height: 100px; color: blue; background: url("../images/main/test-img.jpg") 0 0 no-repeat; background-size: cover; }
+.media-test li {
+	float: left;
+	width: 33.3333%;
+	height: 100px;
+	color: blue;
+	background: url("../images/main/test-img.jpg") 0 0 no-repeat;
+	background-size: cover;
+}
 
-@media (min-width: 0px) and (max-width: 1079px) { .media-test { *zoom: 1; }
-  .media-test:before, .media-test:after { content: ""; display: table; }
-  .media-test:after { clear: both; }
-  .media-test li { color: red; } }
+@media (min-width: 0px) and (max-width: 1079px) {
+	.media-test {
+		*zoom: 1;
+	}
+	.media-test:before, .media-test:after {
+		content: "";
+		display: table;
+	}
+	.media-test:after {
+		clear: both;
+	}
+	.media-test li {
+		color: red;
+	}
+}
 
-@media (min-width: 680px) and (max-width: 1079px) { .media-test { *zoom: 1; }
-  .media-test:before, .media-test:after { content: ""; display: table; }
-  .media-test:after { clear: both; }
-  .media-test li { color: yellow; } }
+@media (min-width: 680px) and (max-width: 1079px) {
+	.media-test {
+		*zoom: 1;
+	}
+	.media-test:before, .media-test:after {
+		content: "";
+		display: table;
+	}
+	.media-test:after {
+		clear: both;
+	}
+	.media-test li {
+		color: yellow;
+	}
+}
 
-.kcm { display: -webkit-box; display: -webkit-flex; display: -moz-flex; display: -ms-flexbox; display: flex; }
+.kcm {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+/*# sourceMappingURL=style.css.map */

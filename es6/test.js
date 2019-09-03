@@ -6,6 +6,26 @@
 // 변수의 정의가 그 범위에 따라 선언과 할당으로 분리되는것 이다.
 
 
+// var (Function Scoped) - function 단위의 스코프를 가진다.
+// let, const (Block Scoped) - {} 단위의 스코프를 가진다.
+
+for(var j=0; j<10; j++){
+	console.log('j', j);
+}
+console.log('after loop j is ', j)
+
+
+
+function counter() {
+	for (var i=0; i<10; i++) {
+		console.log('i', i)
+	}
+}
+counter()
+console.log('after loop i is', i)
+
+
+
 // var snack = "콘칩";
 
 // function getFood(food) {
@@ -47,3 +67,4 @@
 // }
 
 // console.log(getFood(false));
+
